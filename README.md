@@ -5,7 +5,7 @@ Company: Countercept (@countercept)
 Website: https://countercept.com
 
 
-A python2 script for decrypting the C2 traffic used by the DOUBLEPULSAR SMB implant from a PCAP file. The encryption used is a simple 4-byte XOR, which you can often see being displayed in the command output from the FUZZBENCH toolset. This makes use of the fact that a set of four contiguous zeros are present in the SESSION_SETUP parameters in the first non-ping packet, which reveals the XOR key directly and this is used to decrypt all of the traffic.
+A python2 script for decrypting the C2 traffic used by the DOUBLEPULSAR SMB implant from a PCAP file. The encryption used is a simple 4-byte XOR, which you can often see being displayed in the command output from the FUZZBUNCH toolset. This makes use of the fact that a set of four contiguous zeros are present in the SESSION_SETUP parameters in the first non-ping packet, which reveals the XOR key directly and this is used to decrypt all of the traffic.
 
 This is an early release and relies on finding certain specific components in the network packets and has been tested with the DLL injection functionality. For best results, supply a PCAP file that has only one command within the traffic. 
 
